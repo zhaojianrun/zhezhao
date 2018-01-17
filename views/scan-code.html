@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>商家扫描二维码</title>
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/main.css">
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/font/iconfont.css">
+    <script src="../assets/js/jquery.js"></script>
+    <script>
+      $(readyRun);
+      function readyRun() {
+        $(".close-qrcode-win").on('click',closeQrCodeWin);
+      }
+      function closeQrCodeWin() {
+        $("#coupon-layer").hide();
+      }
+    </script>
+</head>
+<body>
+<div id="coupon-layer" class="coupon-modal-layer">
+    <div class="modal-content qrcode-modal-content">
+        <div class="qrcode-win">
+            <div class="close-qrcode-win">×</div>
+            <div class="use-coupon">使用优惠券</div>
+            <div class="reminder-use">请商家扫描优惠券二维码</div>
+            <img src="../assets/images/qrcode.jpg" class="qr-code-picture"/>
+        </div>
+    </div>
+</div>
+</body>
+</html>
